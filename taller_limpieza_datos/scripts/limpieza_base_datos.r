@@ -33,9 +33,9 @@ print(lineas_iniciales)
 
 # TODO 1:
 # Identifique:
-# a) el delimitador;
+# a) el delimitador;El delimitador es el punto y coma 
 # b) la codificación del archivo;
-# c) las cadenas que representan valores perdidos.
+# c) las cadenas que representan valores perdidos.Una forma es escribir N/A. otra es guión(-)
 
 
 # 1. Importar la base ----------------------------------------------------------
@@ -53,9 +53,9 @@ print(lineas_iniciales)
 
 base <- read_delim(
   file = ruta_entrada,
-  delim = "COMPLETAR",
-  locale = locale(encoding = "COMPLETAR"),
-  na = c("COMPLETAR"),
+  delim = ";",
+  locale = locale(encoding = "UTF-8"),
+  na = c("N/A; N/D; -"),
   col_types = cols(.default = col_character()),
   trim_ws = FALSE,
   show_col_types = FALSE
@@ -87,10 +87,12 @@ base <- base %>%
   mutate(
     nombre = recode(
       nombre,
-      " Ana María López " = "Ana María López"
+      " Ana María López " = "Ana María López",
+      "JOSE MUÑOZ"= "Jose Muñoz"
       # TODO: agregue aquí el otro nombre que necesita corrección.
       # Recuerde poner una coma al final de la línea anterior.
-    )
+    ),
+    nombre=str_to_t
   )
 
 
@@ -104,7 +106,9 @@ base <- base %>%
       ciudad,
       "Bogotá " = "Bogotá"
       # TODO: agregue las demás ciudades que necesitan corrección.
-      #
+      #"medellín" = "Medellín",
+      "CALI" = "Cali",
+      "bogotá" = "Bogotá"
       # Ejemplo:
       # "valor original" = "valor corregido",
     )
@@ -243,3 +247,4 @@ write_csv(
 )
 
 print("La base limpia fue guardada en resultados/base_limpia.csv")
+
