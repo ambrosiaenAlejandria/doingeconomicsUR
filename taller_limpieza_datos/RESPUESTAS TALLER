@@ -1,0 +1,31 @@
+# Respuestas del estudiante
+
+**Nombre: Danna Sofía Romero Ortiz 
+
+**Usuario de GitHub:ambrosiaenAlejandria, Github no me dejo usar mi correo institucional
+
+## 1. Diagnóstico del archivo
+
+**Delimitador identificado: ;
+
+**Codificación identificada: "WINDOWS-1252"
+
+**Problemas encontrados en las fechas: Diferencia en signos, no encajaban en la estructura solicitada
+
+**Problemas encontrados en las variables numéricas: No encajaban en la estructura solicitada, datos faltantes
+
+**Problemas encontrados en las variables de texto: Espacios, mala ortografía y datos faltantes
+
+**Valores usados para representar datos faltantes:"N/A", "-", "N/D"
+
+## 2. Decisiones de limpieza
+
+Explique brevemente las principales decisiones que tomó:
+
+1.Recodificar los datos faltantes
+2. Corregir ortografía para mejor legibilidad
+3.Establecer estructuras definidas para evitar confusión
+
+## 3. Enlace de entrega
+
+Pegue aquí el enlace al archivo  dentro de su *fork*:
